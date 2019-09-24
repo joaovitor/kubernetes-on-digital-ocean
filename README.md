@@ -173,9 +173,9 @@ sed -e "s#yourdomain#${DOMAIN_DO}#g" \
 - Deploy hello server
 
 ```shell
-kubectl run hello-server --image=nginx --replicas=3 --port=80 -n web
+kubectl run hello-server --image=gcr.io/google-samples/hello-app:1.0 --replicas=3 --port=80 -n web
 kubectl expose deployment hello-server --type=LoadBalancer --name=hello-service --port 80 --target-port=80 -n web
-kubectl annotate service hello-service "external-dns.alpha.kubernetes.io/hostname=hello.k8sdo.ml." -n web
+kubectl annotate service hello-service "external-dns.alpha.kubernetes.io/hostname=hello.k8sdo.ml" -n web
 kubectl annotate service hello-service "external-dns.alpha.kubernetes.io/ttl=30" -n web
 ```
 
