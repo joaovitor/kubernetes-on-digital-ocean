@@ -1,5 +1,9 @@
 # Kubernetes in Digital Ocean
 
+## Slides available
+
+[Slides](https://j.mp/jv-k8s-do)
+
 ## Documentation
 
 [DO - kubernetes docs](https://www.digitalocean.com/docs/kubernetes/)
